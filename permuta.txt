@@ -1,0 +1,37 @@
+seleciona(X,[X|Y],Y).
+seleciona(A,[B|C],[B|D]):-seleciona(A,C,D).
+
+permuta(A,[B|D]) :- seleciona(B,A,C), permuta(C,D).
+permuta([],[]).
+
+ordem([]).
+ordem([_]).
+ordem([A,B|C]) :- A => B, !, ordem([B|C]).
+
+in(X,[X|_]) :- !. //x pertence a lista se for o primeiro da lista
+in(X,,[_|Y]) :- in(X,Y).
+
+add(X,L,L) :- in(X,L), !.
+add(X,L[X|L]).//executa somente se a exceção não funcionar
+
+ap([],L,L)
+ap([A|B],c,[aA]:-ap(B,C,D).
+A|D
+
+
+reversa([],[])
+reversa([A|B],L) :- reversa(B,Brev), ap(Brev,[A],L).
+
+mult(X,Y,Z) :- Z is X * Y.
+
+comp([],0).
+comp([_|X],C):- comp(X,C1), C Is C1 + 1. //calculo o comprimento
+
+soma([],0).
+soma([A|B],S) :- soma(B,S1), S is S1 + A.
+
+teste(X,Y,Z) :- call(X,Y,Z).
+
+
+
+-- Backtracking (retrocesso)
