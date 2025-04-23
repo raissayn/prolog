@@ -14,7 +14,7 @@
 
 <hr style="border: 2px solid #f78da7;"/>
 
-## Descrição
+## 🏷️ Descrição
 
 Este repositório tem como objetivo acompanhar minha evolução na disciplina de **Programação Lógica**,  
 documentando semanalmente os códigos, atividades e projetos desenvolvidos ao longo do semestre.
