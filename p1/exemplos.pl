@@ -22,3 +22,18 @@ seleciona(X, [Y|Z], [Y|W]) :- seleciona(X, Z, W).
 
 permuta(A, [B|D]) :- seleciona(B, A, C), permuta(C, D).
 permuta([], []).
+
+/*% verifica se um valor é membro da lista */
+membro(X, [X|_]) :- !.
+membro(X, [_|Y]) :- membro(X, Y).
+
+/* apaga(X, L, R) - R é a lista L sem o elemento X */
+apaga(X, [X|Y], Y).
+apaga(X, [Y|Z], [Y|Z1]) :- apaga(X, Z, Z1).
+
+/* reverte uma lista usando o predicado ap */
+ap([], L, L) :- !.
+ap([A|B], C, [A|D]) :- ap(B, C, D).
+
+reversa([], []) :- !.
+reversa([A|B], R) :- reversa(B, D), ap(D, [A], R).
