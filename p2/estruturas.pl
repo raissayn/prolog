@@ -34,6 +34,13 @@ insere(X,no(I,E,D), no(I,E,Ds)) :- insere (X,D,Ds).
 preordem(vazia) :- !.
 preordem(no(I,E,D)) :- write(I), write(" "), preordem(E), preordem(D).
 
+emordem(vazia) :- !.
+emordem(no[I,E,D]) :- emordem(E), write(I), write(" "), emordem(D).
+
+% em ordem(T,L);
+emordem(vazia,[]).
+emordem(no(I,E,D),L) :- emordem(E,Le), append(Le,[I],Ls), emordem(D,Ld), append(Ls,Ld,L).
+
 insLista([],vazia).
 insLista([A|B],T,Ts) :- insere(A,T,T1), insLista(B,T1,Ts).
 

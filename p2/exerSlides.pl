@@ -1,0 +1,1 @@
+% exercícios presentes nos slides
