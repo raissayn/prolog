@@ -1,0 +1,23 @@
+
+ESTRUTURA DE DADOS
+empilha(A, B, [A|B])
+    - Insere no início da lista.
+    - Simula uma pilha, onde o topo é a cabeça da lista.
+
+insere(A, F, Fs) :- append(F, [A], Fs).
+    - Insere no final da lista.
+    - Simula uma fila, onde o novo elemento vai para o fim.
+➡️ empilha é para pilha.
+➡️ insere é para fila.
+
+ desempilha(A, [A|B], B)
+    - Remove do início da lista.
+    - Tira o topo da pilha.
+
+retira(A, [A|F], F)
+    - Também remove do início da lista.
+    - Tira o primeiro da fila.
+
+➡️ Ambos removem o primeiro da lista, mas:
+    Em pilha, isso significa remover o último que entrou.
+    Em fila, isso significa remover o primeiro que entrou.
